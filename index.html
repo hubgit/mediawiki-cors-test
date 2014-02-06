@@ -30,7 +30,7 @@ document.getElementById('cookie').textContent = 'Cookie set.';
 		document.getElementById('token-credentials').textContent = 'Token with credentials: ' + data.token.edittoken;
 	}
 	xhr.onerror = function() {
-		console.log(this);
+		//console.log(this);
 		document.getElementById('token-credentials').textContent = 'Error fetching token with credentials!';
 	}
 	xhr.withCredentials = true;
