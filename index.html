@@ -13,7 +13,7 @@ document.getElementById('cookie').textContent = 'Cookie set.';
 (function() {
 	// fetch the token without credentials
 	var xhr = new XMLHttpRequest;
-	xhr.open('GET', 'http://www.macropus.org/2014/mediawiki-cors/api.php?_' + Math.random());
+	xhr.open('GET', 'http://www.macropus.org/2014/mediawiki-cors-test/api.php?_' + Math.random());
 	xhr.onload = function() {
 		var data = JSON.parse(this.responseText);
 		document.getElementById('token').textContent = 'Token without credentials: ' + data.token.edittoken;
@@ -24,7 +24,7 @@ document.getElementById('cookie').textContent = 'Cookie set.';
 (function() {
 	// fetch the token with credentials
 	var xhr = new XMLHttpRequest;
-	xhr.open('GET', 'http://www.macropus.org/2014/mediawiki-cors/api.php?_' + Math.random());
+	xhr.open('GET', 'http://www.macropus.org/2014/mediawiki-cors-test/api.php?_' + Math.random());
 	xhr.onload = function() {
 		var data = JSON.parse(this.responseText);
 		document.getElementById('token-credentials').textContent = 'Token with credentials: ' + data.token.edittoken;
